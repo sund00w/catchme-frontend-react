@@ -1,12 +1,23 @@
-import { TestComponent } from './component/test-component';
-import { TestComponent2 } from './component/test-component2';
+import { css } from "@emotion/react";
+import { Button, Button2 } from "./components/Button";
+import { TestComponent } from "./components/test-component";
+import { TestComponent2 } from "./components/test-component2";
 
 function App() {
-  console.log("App이 재호출되었습니다.");
   return (
-    <div className='App'>
+    <div className="App">
       <TestComponent />
       <TestComponent2 />
+      <Button color="red">red test</Button>
+      <Button color="blue">blue test</Button>
+      <Button2 color="yellow">yellow test</Button2>
+      <button
+        css={css`
+          background: green;
+        `}
+      >
+        css button test
+      </button>
     </div>
   );
 }
